@@ -60,9 +60,43 @@
 
 .elevation-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 32px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.elevation-category {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.elevation-category__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.elevation-subcategory {
+  margin-top: 32px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.elevation-subcategory__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #555;
 }
 
 .elevation-card {
@@ -93,14 +127,27 @@
   font-weight: 600;
 }
 
+.elevation-card__variable {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: #335cff;
+  
+  code {
+    background: transparent;
+    padding: 0;
+  }
+}
+
 .elevation-card__shadow {
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
-  font-size: 12px;
+  font-size: 11px;
   background: #f5f7fa;
   padding: 8px 12px;
   border-radius: 8px;
-  color: #333;
+  color: #555;
   word-break: break-word;
+  line-height: 1.5;
 }
 
 .elevation-card__layer-title {

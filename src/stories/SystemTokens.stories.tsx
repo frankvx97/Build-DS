@@ -14,23 +14,21 @@ type AnimationRow = TableRow & {
   previewValue: string;
 };
 
-type ElevationProperty = {
-  name: string;
-  rawValue: string;
-  displayValue: string;
+type ElevationToken = {
+  id: string;
+  label: string;
+  boxShadow: string;
   variable: string;
 };
 
-type ElevationLayer = {
-  index: number;
-  properties: ElevationProperty[];
+type ElevationSubcategory = {
+  name: string;
+  tokens: ElevationToken[];
 };
 
-type ElevationGroup = {
-  id: string;
-  label: string;
-  layers: ElevationLayer[];
-  boxShadow: string | null;
+type ElevationCategory = {
+  categoryName: string;
+  subcategories: ElevationSubcategory[];
 };
 
 const meta: Meta = {
@@ -43,53 +41,43 @@ const meta: Meta = {
 export default meta;
 
 export const Elevation = () => {
-  const groups = buildElevationGroups();
+  const groupedElevations = buildGroupedElevations();
 
   return (
     <div className="tokens-page">
       <h1>Elevation</h1>
       <p className="tokens-page__description">
-        Shadow tokens representing component elevation stacks. Each card previews the resolved <code>box-shadow</code> output and exposes
-        the raw token values.
+        Shadow tokens representing component elevation stacks. Each card previews the resolved <code>box-shadow</code> value.
       </p>
 
-      <div className="elevation-grid">
-        {groups.map((group) => (
-          <div key={group.id} className="elevation-card">
-            <div className="elevation-card__preview" style={{ boxShadow: group.boxShadow ?? 'none' }} />
-            <div className="elevation-card__header">
-              <div className="elevation-card__title">{group.label}</div>
-              <div className="elevation-card__shadow">{group.boxShadow ?? 'No shadow defined'}</div>
-            </div>
+      {groupedElevations.map((category: ElevationCategory) => (
+        <div key={category.categoryName} className="elevation-category">
+          <h3 className="elevation-category__title">{category.categoryName}</h3>
 
-            {group.layers.map((layer) => (
-              <div key={layer.index}>
-                <div className="elevation-card__layer-title">Layer {layer.index}</div>
-                <table className="tokens-table tokens-table--compact">
-                  <thead>
-                    <tr>
-                      <th>Property</th>
-                      <th>Value</th>
-                      <th>Variable</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {layer.properties.map((property) => (
-                      <tr key={property.variable}>
-                        <td>{property.name}</td>
-                        <td>{property.displayValue}</td>
-                        <td>
-                          <code>{property.variable}</code>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+          {category.subcategories.map((subcategory: ElevationSubcategory, subIndex: number) => (
+            <div key={`${category.categoryName}-${subIndex}`} className="elevation-subcategory">
+              {subcategory.name && (
+                <h4 className="elevation-subcategory__title">{subcategory.name}</h4>
+              )}
+
+              <div className="elevation-grid">
+                {subcategory.tokens.map((token: ElevationToken) => (
+                  <div key={token.id} className="elevation-card">
+                    <div className="elevation-card__preview" style={{ boxShadow: token.boxShadow }} />
+                    <div className="elevation-card__header">
+                      <div className="elevation-card__title">{token.label}</div>
+                      <div className="elevation-card__variable">
+                        <code>{token.variable}</code>
+                      </div>
+                      <div className="elevation-card__shadow">{token.boxShadow}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };
@@ -359,113 +347,83 @@ function buildZIndexRows(): TableRow[] {
     .sort((a, b) => Number.parseInt(a.value, 10) - Number.parseInt(b.value, 10));
 }
 
-function buildElevationGroups(): ElevationGroup[] {
-  const propertyOrder = ['Type', 'X', 'Y', 'Blur', 'Spread', 'Color'];
-  const groups = new Map<string, Map<number, ElevationLayer>>();
-
-  getSection('Elevation')
+function buildGroupedElevations(): ElevationCategory[] {
+  const allTokens = getSection('Elevation')
     .flatMap((group) => group.tokens)
-    .forEach((token) => {
-      const parsed = parseElevationTokenName(token.name);
-      if (!parsed) {
-        return;
-      }
-
-      const { base, index, property } = parsed;
-
-      if (!groups.has(base)) {
-        groups.set(base, new Map());
-      }
-
-      const layerMap = groups.get(base)!;
-      if (!layerMap.has(index)) {
-        layerMap.set(index, { index, properties: [] });
-      }
-
-      const layer = layerMap.get(index)!;
-      const rawValue = stripQuotes(token.value);
-      layer.properties.push({
-        name: property,
-        rawValue,
-        displayValue: formatElevationDisplay(property, rawValue),
-        variable: token.variable,
-      });
+    .map((token) => ({
+      id: token.name,
+      label: formatTitle(token.name),
+      boxShadow: token.value,
+      variable: token.variable,
+    }));
+  
+  const regularShadows: ElevationToken[] = [];
+  const customShadows: ElevationToken[] = [];
+  const buttonTokens: ElevationToken[] = [];
+  const fancyButtonTokens: ElevationToken[] = [];
+  const toggleTokens: ElevationToken[] = [];
+  const tooltipTokens: ElevationToken[] = [];
+  
+  allTokens.forEach((token) => {
+    const lowerCaseId = token.id.toLowerCase();
+    
+    if (lowerCaseId.startsWith('regularshadow')) {
+      regularShadows.push(token);
+    } else if (lowerCaseId.startsWith('customshadows')) {
+      customShadows.push(token);
+    } else if (lowerCaseId.startsWith('componentsfancybuttons')) {
+      fancyButtonTokens.push(token);
+    } else if (lowerCaseId.startsWith('componentsbuttons')) {
+      buttonTokens.push(token);
+    } else if (lowerCaseId.startsWith('componentstoggle')) {
+      toggleTokens.push(token);
+    } else if (lowerCaseId.startsWith('componentstooltip') || lowerCaseId.startsWith('tooltip')) {
+      tooltipTokens.push(token);
+    }
+  });
+  
+  const categories: ElevationCategory[] = [];
+  
+  if (regularShadows.length > 0) {
+    categories.push({
+      categoryName: 'Regular Shadows',
+      subcategories: [{ name: '', tokens: regularShadows }],
     });
-
-  return Array.from(groups.entries())
-    .map(([base, layerMap]) => {
-      const layers = Array.from(layerMap.values())
-        .map((layer) => ({
-          index: layer.index,
-          properties: layer.properties
-            .slice()
-            .sort((a, b) => {
-              const orderA = propertyOrder.indexOf(a.name);
-              const orderB = propertyOrder.indexOf(b.name);
-              const safeA = orderA === -1 ? Number.MAX_SAFE_INTEGER : orderA;
-              const safeB = orderB === -1 ? Number.MAX_SAFE_INTEGER : orderB;
-              return safeA - safeB;
-            }),
-        }))
-        .sort((a, b) => a.index - b.index);
-
-      return {
-        id: base,
-        label: formatTitle(base),
-        layers,
-        boxShadow: computeBoxShadow(layers),
-      };
-    })
-    .sort((a, b) => a.label.localeCompare(b.label));
-}
-
-function parseElevationTokenName(name: string): { base: string; index: number; property: string } | null {
-  const match = name.match(/^(.*?)(\d+)?(Blur|Color|Spread|Type|X|Y)$/);
-  if (!match) {
-    return null;
   }
-
-  const [, basePart, indexPart, property] = match;
-  const base = basePart ?? name;
-  const index = indexPart ? Number.parseInt(indexPart, 10) : 0;
-
-  return { base, index, property };
-}
-
-function computeBoxShadow(layers: ElevationLayer[]): string | null {
-  const parts = layers
-    .map((layer) => {
-      const map = Object.fromEntries(layer.properties.map((prop) => [prop.name.toLowerCase(), prop.rawValue]));
-      const type = map.type ?? 'dropShadow';
-      const color = map.color;
-      if (!color) {
-        return null;
-      }
-
-      const x = withUnit(map.x ?? '0');
-      const y = withUnit(map.y ?? '0');
-      const blur = withUnit(map.blur ?? '0');
-      const spread = withUnit(map.spread ?? '0');
-      const prefix = type === 'innerShadow' ? 'inset ' : '';
-
-      return `${prefix}${x} ${y} ${blur} ${spread} ${color}`.trim();
-    })
-    .filter(Boolean);
-
-  return parts.length ? parts.join(', ') : null;
-}
-
-function formatElevationDisplay(property: string, value: string): string {
-  const key = property.toLowerCase();
-  if (key === 'type') {
-    return capitalizeWords(value.replace('Shadow', ' Shadow'));
+  
+  if (customShadows.length > 0) {
+    categories.push({
+      categoryName: 'Custom Shadows',
+      subcategories: [{ name: '', tokens: customShadows }],
+    });
   }
-
-  if (key === 'color') {
-    return value;
+  
+  const componentSubcategories: ElevationSubcategory[] = [];
+  
+  if (buttonTokens.length > 0) {
+    componentSubcategories.push({ name: 'Buttons', tokens: buttonTokens });
   }
-
-  return withUnit(value);
+  
+  if (fancyButtonTokens.length > 0) {
+    componentSubcategories.push({ name: 'Fancy Buttons', tokens: fancyButtonTokens });
+  }
+  
+  if (toggleTokens.length > 0) {
+    componentSubcategories.push({ name: 'Toggle', tokens: toggleTokens });
+  }
+  
+  if (tooltipTokens.length > 0) {
+    componentSubcategories.push({ name: 'Tooltip', tokens: tooltipTokens });
+  }
+  
+  if (componentSubcategories.length > 0) {
+    categories.push({
+      categoryName: 'Components',
+      subcategories: componentSubcategories,
+    });
+  }
+  
+  return categories;
 }
 
 function formatBreakpointLabel(name: string): string {
@@ -503,22 +461,6 @@ function formatLabel(segments: string[]): string {
     .join(' ');
 }
 
-function withUnit(value: string): string {
-  if (/(px|rem|em|%)$/i.test(value)) {
-    return value;
-  }
-
-  if (/^-?\d+(\.\d+)?$/.test(value)) {
-    return `${value}px`;
-  }
-
-  return value;
-}
-
-function stripQuotes(value: string): string {
-  return value.replace(/^"|"$/g, '');
-}
-
 function capitalize(value: string): string {
   if (!value) {
     return value;
@@ -527,16 +469,19 @@ function capitalize(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
-function capitalizeWords(value: string): string {
-  return value
-    .split(/\s+/)
-    .map((word) => capitalize(word))
-    .join(' ');
+function stripQuotes(value: string): string {
+  return value.replace(/^"|"$/g, '');
 }
 
 function formatTitle(name: string): string {
-  return toSegments(name)
-    .map((segment) => (/^\d+$/.test(segment) ? segment : capitalize(segment)))
+  // Convert camelCase to spaced title case
+  // e.g., "componentsButtonsErrorFocus" -> "Components Buttons Error Focus"
+  return name
+    .replace(/([a-z])([A-Z])/g, '$1 $2')  // Add space before capitals
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')  // Handle acronyms
+    .split(/[\s-_]+/)  // Split on spaces, dashes, underscores
+    .filter(Boolean)
+    .map((segment) => capitalize(segment))
     .join(' ');
 }
 

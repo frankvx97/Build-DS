@@ -1,8 +1,8 @@
 // BUILD DESIGN SYSTEM - All Tokens (Light Mode)
-// Auto-generated on 2025-10-26T15:12:05.986Z
+// Auto-generated on 2025-10-26T18:26:19.791Z
 
 // BUILD DESIGN SYSTEM - Foundations (SCSS)
-// Generated on 2025-10-26T15:12:05.954Z
+// Generated on 2025-10-26T18:26:19.777Z
 
 // alpha
 $alphaBlackAlpha10: #1717171a;
@@ -179,7 +179,7 @@ $yellow900: #86661d;
 $yellow950: #624c18;
 
 // BUILD DESIGN SYSTEM - Light Tokens (SCSS)
-// Generated on 2025-10-26T15:12:05.959Z
+// Generated on 2025-10-26T18:26:19.782Z
 
 // overlay
 $overlayOverlayGray: #3333333d;
@@ -269,7 +269,7 @@ $textSub600: $neutralSlate600;
 $textWhite0: $neutralSlate0;
 
 // BUILD DESIGN SYSTEM - Theme (SCSS)
-// Generated on 2025-10-26T15:12:05.964Z
+// Generated on 2025-10-26T18:26:19.786Z
 
 
 // primary-alpha-10
@@ -286,7 +286,7 @@ $primaryDark: $blue800;
 $primaryDarker: $blue700;
 
 // BUILD DESIGN SYSTEM - Radius (SCSS)
-// Generated on 2025-10-26T15:12:05.964Z
+// Generated on 2025-10-26T18:26:19.787Z
 
 // radius-0
 $radius0: 0px;
@@ -314,7 +314,7 @@ $radius8: 8px;
 $radiusFull: 999px;
 
 // BUILD DESIGN SYSTEM - Spacing (SCSS)
-// Generated on 2025-10-26T15:12:05.965Z
+// Generated on 2025-10-26T18:26:19.787Z
 
 // spacing-0
 $spacing0: 0px;
@@ -344,7 +344,7 @@ $spacing6: 6px;
 $spacing8: 8px;
 
 // BUILD DESIGN SYSTEM - Typography (SCSS)
-// Generated on 2025-10-26T15:12:05.968Z
+// Generated on 2025-10-26T18:26:19.788Z
 
 // fontFamilies
 $fontFamiliesInter: "Inter";
@@ -408,544 +408,30 @@ $textCaseUppercase: uppercase;
 // textDecoration
 $textDecorationNone: none;
 
-// Docs
-$docsLabelFontFamily: $fontFamiliesInter;
-$docsLabelFontSize: $fontSize4;
-$docsLabelFontWeight: $fontWeightsInterDisplay0;
-$docsLabelLetterSpacing: $letterSpacing3;
-$docsLabelLineHeight: $lineHeights4;
-$docsLabelParagraphIndent: $paragraphIndent0;
-$docsLabelParagraphSpacing: $paragraphSpacing0;
-$docsLabelTextCase: $textCaseNone;
-$docsLabelTextDecoration: $textDecorationNone;
-$docsParagraphFontFamily: $fontFamiliesInter;
-$docsParagraphFontSize: $fontSize4;
-$docsParagraphFontWeight: $fontWeightsInter2;
-$docsParagraphLetterSpacing: $letterSpacing3;
-$docsParagraphLineHeight: $lineHeights4;
-$docsParagraphParagraphIndent: $paragraphIndent0;
-$docsParagraphParagraphSpacing: $paragraphSpacing0;
-$docsParagraphTextCase: $textCaseNone;
-$docsParagraphTextDecoration: $textDecorationNone;
-// Label
-$labelLargeFontFamily: $fontFamiliesInter;
-$labelLargeFontSize: $fontSize4;
-$labelLargeFontWeight: $fontWeightsInterDisplay0;
-$labelLargeLetterSpacing: $letterSpacing3;
-$labelLargeLineHeight: $lineHeights7;
-$labelLargeParagraphIndent: $paragraphIndent0;
-$labelLargeParagraphSpacing: $paragraphSpacing0;
-$labelLargeTextCase: $textCaseNone;
-$labelLargeTextDecoration: $textDecorationNone;
-$labelMediumFontFamily: $fontFamiliesInter;
-$labelMediumFontSize: $fontSize3;
-$labelMediumFontWeight: $fontWeightsInterDisplay0;
-$labelMediumLetterSpacing: $letterSpacing4;
-$labelMediumLineHeight: $lineHeights7;
-$labelMediumParagraphIndent: $paragraphIndent0;
-$labelMediumParagraphSpacing: $paragraphSpacing0;
-$labelMediumTextCase: $textCaseNone;
-$labelMediumTextDecoration: $textDecorationNone;
-$labelSmallFontFamily: $fontFamiliesInter;
-$labelSmallFontSize: $fontSize2;
-$labelSmallFontWeight: $fontWeightsInterDisplay0;
-$labelSmallLetterSpacing: $letterSpacing5;
-$labelSmallLineHeight: $lineHeights9;
-$labelSmallParagraphIndent: $paragraphIndent0;
-$labelSmallParagraphSpacing: $paragraphSpacing0;
-$labelSmallTextCase: $textCaseNone;
-$labelSmallTextDecoration: $textDecorationNone;
-$labelXLargeFontFamily: $fontFamiliesInter;
-$labelXLargeFontSize: $fontSize6;
-$labelXLargeFontWeight: $fontWeightsInterDisplay0;
-$labelXLargeLetterSpacing: $letterSpacing3;
-$labelXLargeLineHeight: $lineHeights4;
-$labelXLargeParagraphIndent: $paragraphIndent0;
-$labelXLargeParagraphSpacing: $paragraphSpacing0;
-$labelXLargeTextCase: $textCaseNone;
-$labelXLargeTextDecoration: $textDecorationNone;
-$labelXSmallFontFamily: $fontFamiliesInter;
-$labelXSmallFontSize: $fontSize1;
-$labelXSmallFontWeight: $fontWeightsInterDisplay0;
-$labelXSmallLetterSpacing: $letterSpacing2;
-$labelXSmallLineHeight: $lineHeights10;
-$labelXSmallParagraphIndent: $paragraphIndent0;
-$labelXSmallParagraphSpacing: $paragraphSpacing0;
-$labelXSmallTextCase: $textCaseNone;
-$labelXSmallTextDecoration: $textDecorationNone;
-// Paragraph
-$paragraphLargeFontFamily: $fontFamiliesInter;
-$paragraphLargeFontSize: $fontSize4;
-$paragraphLargeFontWeight: $fontWeightsInter2;
-$paragraphLargeLetterSpacing: $letterSpacing3;
-$paragraphLargeLineHeight: $lineHeights7;
-$paragraphLargeParagraphIndent: $paragraphIndent0;
-$paragraphLargeParagraphSpacing: $paragraphSpacing0;
-$paragraphLargeTextCase: $textCaseNone;
-$paragraphLargeTextDecoration: $textDecorationNone;
-$paragraphMediumFontFamily: $fontFamiliesInter;
-$paragraphMediumFontSize: $fontSize3;
-$paragraphMediumFontWeight: $fontWeightsInter2;
-$paragraphMediumLetterSpacing: $letterSpacing4;
-$paragraphMediumLineHeight: $lineHeights7;
-$paragraphMediumParagraphIndent: $paragraphIndent0;
-$paragraphMediumParagraphSpacing: $paragraphSpacing0;
-$paragraphMediumTextCase: $textCaseNone;
-$paragraphMediumTextDecoration: $textDecorationNone;
-$paragraphSmallFontFamily: $fontFamiliesInter;
-$paragraphSmallFontSize: $fontSize2;
-$paragraphSmallFontWeight: $fontWeightsInter2;
-$paragraphSmallLetterSpacing: $letterSpacing5;
-$paragraphSmallLineHeight: $lineHeights9;
-$paragraphSmallParagraphIndent: $paragraphIndent0;
-$paragraphSmallParagraphSpacing: $paragraphSpacing0;
-$paragraphSmallTextCase: $textCaseNone;
-$paragraphSmallTextDecoration: $textDecorationNone;
-$paragraphXLargeFontFamily: $fontFamiliesInter;
-$paragraphXLargeFontSize: $fontSize6;
-$paragraphXLargeFontWeight: $fontWeightsInter2;
-$paragraphXLargeLetterSpacing: $letterSpacing3;
-$paragraphXLargeLineHeight: $lineHeights4;
-$paragraphXLargeParagraphIndent: $paragraphIndent0;
-$paragraphXLargeParagraphSpacing: $paragraphSpacing0;
-$paragraphXLargeTextCase: $textCaseNone;
-$paragraphXLargeTextDecoration: $textDecorationNone;
-$paragraphXSmallFontFamily: $fontFamiliesInter;
-$paragraphXSmallFontSize: $fontSize1;
-$paragraphXSmallFontWeight: $fontWeightsInter2;
-$paragraphXSmallLetterSpacing: $letterSpacing2;
-$paragraphXSmallLineHeight: $lineHeights10;
-$paragraphXSmallParagraphIndent: $paragraphIndent0;
-$paragraphXSmallParagraphSpacing: $paragraphSpacing0;
-$paragraphXSmallTextCase: $textCaseNone;
-$paragraphXSmallTextDecoration: $textDecorationNone;
-// Subheading
-$subheading2XSmallFontFamily: $fontFamiliesInter;
-$subheading2XSmallFontSize: $fontSize0;
-$subheading2XSmallFontWeight: $fontWeightsInterDisplay0;
-$subheading2XSmallLetterSpacing: $letterSpacing8;
-$subheading2XSmallLineHeight: $lineHeights19;
-$subheading2XSmallParagraphIndent: $paragraphIndent0;
-$subheading2XSmallParagraphSpacing: $paragraphSpacing0;
-$subheading2XSmallTextCase: $textCaseUppercase;
-$subheading2XSmallTextDecoration: $textDecorationNone;
-$subheadingMediumFontFamily: $fontFamiliesInter;
-$subheadingMediumFontSize: $fontSize3;
-$subheadingMediumFontWeight: $fontWeightsInterDisplay0;
-$subheadingMediumLetterSpacing: $letterSpacing6;
-$subheadingMediumLineHeight: $lineHeights7;
-$subheadingMediumParagraphIndent: $paragraphIndent0;
-$subheadingMediumParagraphSpacing: $paragraphSpacing0;
-$subheadingMediumTextCase: $textCaseUppercase;
-$subheadingMediumTextDecoration: $textDecorationNone;
-$subheadingSmallFontFamily: $fontFamiliesInter;
-$subheadingSmallFontSize: $fontSize2;
-$subheadingSmallFontWeight: $fontWeightsInterDisplay0;
-$subheadingSmallLetterSpacing: $letterSpacing6;
-$subheadingSmallLineHeight: $lineHeights9;
-$subheadingSmallParagraphIndent: $paragraphIndent0;
-$subheadingSmallParagraphSpacing: $paragraphSpacing0;
-$subheadingSmallTextCase: $textCaseUppercase;
-$subheadingSmallTextDecoration: $textDecorationNone;
-$subheadingXSmallFontFamily: $fontFamiliesInter;
-$subheadingXSmallFontSize: $fontSize1;
-$subheadingXSmallFontWeight: $fontWeightsInterDisplay0;
-$subheadingXSmallLetterSpacing: $letterSpacing7;
-$subheadingXSmallLineHeight: $lineHeights10;
-$subheadingXSmallParagraphIndent: $paragraphIndent0;
-$subheadingXSmallParagraphSpacing: $paragraphSpacing0;
-$subheadingXSmallTextCase: $textCaseUppercase;
-$subheadingXSmallTextDecoration: $textDecorationNone;
-// Title
-$titleH1TitleFontFamily: $fontFamiliesInterDisplay;
-$titleH1TitleFontSize: $fontSize10;
-$titleH1TitleFontWeight: $fontWeightsInterDisplay0;
-$titleH1TitleLetterSpacing: $letterSpacing0;
-$titleH1TitleLineHeight: $lineHeights0;
-$titleH1TitleParagraphIndent: $paragraphIndent0;
-$titleH1TitleParagraphSpacing: $paragraphSpacing0;
-$titleH1TitleTextCase: $textCaseNone;
-$titleH1TitleTextDecoration: $textDecorationNone;
-$titleH2TitleFontFamily: $fontFamiliesInterDisplay;
-$titleH2TitleFontSize: $fontSize9;
-$titleH2TitleFontWeight: $fontWeightsInterDisplay0;
-$titleH2TitleLetterSpacing: $letterSpacing0;
-$titleH2TitleLineHeight: $lineHeights1;
-$titleH2TitleParagraphIndent: $paragraphIndent0;
-$titleH2TitleParagraphSpacing: $paragraphSpacing0;
-$titleH2TitleTextCase: $textCaseNone;
-$titleH2TitleTextDecoration: $textDecorationNone;
-$titleH3TitleFontFamily: $fontFamiliesInterDisplay;
-$titleH3TitleFontSize: $fontSize8;
-$titleH3TitleFontWeight: $fontWeightsInterDisplay0;
-$titleH3TitleLetterSpacing: $letterSpacing0;
-$titleH3TitleLineHeight: $lineHeights2;
-$titleH3TitleParagraphIndent: $paragraphIndent0;
-$titleH3TitleParagraphSpacing: $paragraphSpacing0;
-$titleH3TitleTextCase: $textCaseNone;
-$titleH3TitleTextDecoration: $textDecorationNone;
-$titleH4TitleFontFamily: $fontFamiliesInterDisplay;
-$titleH4TitleFontSize: $fontSize7;
-$titleH4TitleFontWeight: $fontWeightsInterDisplay0;
-$titleH4TitleLetterSpacing: $letterSpacing1;
-$titleH4TitleLineHeight: $lineHeights3;
-$titleH4TitleParagraphIndent: $paragraphIndent0;
-$titleH4TitleParagraphSpacing: $paragraphSpacing0;
-$titleH4TitleTextCase: $textCaseNone;
-$titleH4TitleTextDecoration: $textDecorationNone;
-$titleH5TitleFontFamily: $fontFamiliesInterDisplay;
-$titleH5TitleFontSize: $fontSize6;
-$titleH5TitleFontWeight: $fontWeightsInterDisplay0;
-$titleH5TitleLetterSpacing: $letterSpacing2;
-$titleH5TitleLineHeight: $lineHeights4;
-$titleH5TitleParagraphIndent: $paragraphIndent0;
-$titleH5TitleParagraphSpacing: $paragraphSpacing0;
-$titleH5TitleTextCase: $textCaseNone;
-$titleH5TitleTextDecoration: $textDecorationNone;
-$titleH6TitleFontFamily: $fontFamiliesInterDisplay;
-$titleH6TitleFontSize: $fontSize5;
-$titleH6TitleFontWeight: $fontWeightsInterDisplay0;
-$titleH6TitleLetterSpacing: $letterSpacing2;
-$titleH6TitleLineHeight: $lineHeights5;
-$titleH6TitleParagraphIndent: $paragraphIndent0;
-$titleH6TitleParagraphSpacing: $paragraphSpacing0;
-$titleH6TitleTextCase: $textCaseNone;
-$titleH6TitleTextDecoration: $textDecorationNone;
-
 // BUILD DESIGN SYSTEM - Elevation (SCSS)
-// Generated on 2025-10-26T15:12:05.978Z
+// Generated on 2025-10-26T18:26:19.789Z
 
 // components
-$componentsButtonsErrorFocus0Blur: 0;
-$componentsButtonsErrorFocus0Color: #ffffff;
-$componentsButtonsErrorFocus0Spread: 2;
-$componentsButtonsErrorFocus0Type: "dropShadow";
-$componentsButtonsErrorFocus0X: 0;
-$componentsButtonsErrorFocus0Y: 0;
-$componentsButtonsErrorFocus1Blur: 0;
-$componentsButtonsErrorFocus1Color: #fb37481a;
-$componentsButtonsErrorFocus1Spread: 4;
-$componentsButtonsErrorFocus1Type: "dropShadow";
-$componentsButtonsErrorFocus1X: 0;
-$componentsButtonsErrorFocus1Y: 0;
-$componentsButtonsImportantFocus0Blur: 0;
-$componentsButtonsImportantFocus0Color: #ffffff;
-$componentsButtonsImportantFocus0Spread: 2;
-$componentsButtonsImportantFocus0Type: "dropShadow";
-$componentsButtonsImportantFocus0X: 0;
-$componentsButtonsImportantFocus0Y: 0;
-$componentsButtonsImportantFocus1Blur: 0;
-$componentsButtonsImportantFocus1Color: #99a0ae29;
-$componentsButtonsImportantFocus1Spread: 4;
-$componentsButtonsImportantFocus1Type: "dropShadow";
-$componentsButtonsImportantFocus1X: 0;
-$componentsButtonsImportantFocus1Y: 0;
-$componentsButtonsPrimaryFocus0Blur: 0;
-$componentsButtonsPrimaryFocus0Color: #ffffff;
-$componentsButtonsPrimaryFocus0Spread: 2;
-$componentsButtonsPrimaryFocus0Type: "dropShadow";
-$componentsButtonsPrimaryFocus0X: 0;
-$componentsButtonsPrimaryFocus0Y: 0;
-$componentsButtonsPrimaryFocus1Blur: 0;
-$componentsButtonsPrimaryFocus1Color: #476cff1a;
-$componentsButtonsPrimaryFocus1Spread: 4;
-$componentsButtonsPrimaryFocus1Type: "dropShadow";
-$componentsButtonsPrimaryFocus1X: 0;
-$componentsButtonsPrimaryFocus1Y: 0;
-$componentsFancyButtonsError0Blur: 2;
-$componentsFancyButtonsError0Color: #0e121b3d;
-$componentsFancyButtonsError0Spread: 0;
-$componentsFancyButtonsError0Type: "dropShadow";
-$componentsFancyButtonsError0X: 0;
-$componentsFancyButtonsError0Y: 1;
-$componentsFancyButtonsError1Blur: 0;
-$componentsFancyButtonsError1Color: #fb3748;
-$componentsFancyButtonsError1Spread: 1;
-$componentsFancyButtonsError1Type: "dropShadow";
-$componentsFancyButtonsError1X: 0;
-$componentsFancyButtonsError1Y: 0;
-$componentsFancyButtonsNeutral0Blur: 2;
-$componentsFancyButtonsNeutral0Color: #1b1c1d7a;
-$componentsFancyButtonsNeutral0Spread: 0;
-$componentsFancyButtonsNeutral0Type: "dropShadow";
-$componentsFancyButtonsNeutral0X: 0;
-$componentsFancyButtonsNeutral0Y: 1;
-$componentsFancyButtonsNeutral1Blur: 0;
-$componentsFancyButtonsNeutral1Color: #242628;
-$componentsFancyButtonsNeutral1Spread: 1;
-$componentsFancyButtonsNeutral1Type: "dropShadow";
-$componentsFancyButtonsNeutral1X: 0;
-$componentsFancyButtonsNeutral1Y: 0;
-$componentsFancyButtonsPrimary0Blur: 2;
-$componentsFancyButtonsPrimary0Color: #0e121b3d;
-$componentsFancyButtonsPrimary0Spread: 0;
-$componentsFancyButtonsPrimary0Type: "dropShadow";
-$componentsFancyButtonsPrimary0X: 0;
-$componentsFancyButtonsPrimary0Y: 1;
-$componentsFancyButtonsPrimary1Blur: 0;
-$componentsFancyButtonsPrimary1Color: #335cff;
-$componentsFancyButtonsPrimary1Spread: 1;
-$componentsFancyButtonsPrimary1Type: "dropShadow";
-$componentsFancyButtonsPrimary1X: 0;
-$componentsFancyButtonsPrimary1Y: 0;
-$componentsFancyButtonsStroke0Blur: 3;
-$componentsFancyButtonsStroke0Color: #0e121b1f;
-$componentsFancyButtonsStroke0Spread: 0;
-$componentsFancyButtonsStroke0Type: "dropShadow";
-$componentsFancyButtonsStroke0X: 0;
-$componentsFancyButtonsStroke0Y: 1;
-$componentsFancyButtonsStroke1Blur: 0;
-$componentsFancyButtonsStroke1Color: #ebebeb;
-$componentsFancyButtonsStroke1Spread: 1;
-$componentsFancyButtonsStroke1Type: "dropShadow";
-$componentsFancyButtonsStroke1X: 0;
-$componentsFancyButtonsStroke1Y: 0;
-$componentsToggleSwitch0Blur: 10;
-$componentsToggleSwitch0Color: #0e121b0f;
-$componentsToggleSwitch0Spread: 0;
-$componentsToggleSwitch0Type: "dropShadow";
-$componentsToggleSwitch0X: 0;
-$componentsToggleSwitch0Y: 6;
-$componentsToggleSwitch1Blur: 4;
-$componentsToggleSwitch1Color: #0e121b08;
-$componentsToggleSwitch1Spread: 0;
-$componentsToggleSwitch1Type: "dropShadow";
-$componentsToggleSwitch1X: 0;
-$componentsToggleSwitch1Y: 2;
+$componentsButtonsErrorFocus: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #fb37481a;
+$componentsButtonsImportantFocus: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #99a0ae29;
+$componentsButtonsPrimaryFocus: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #476cff1a;
+$componentsFancyButtonsError: 0px 1px 2px 0px #0e121b3d, 0px 0px 0px 1px #fb3748;
+$componentsFancyButtonsNeutral: 0px 1px 2px 0px #1b1c1d7a, 0px 0px 0px 1px #242628;
+$componentsFancyButtonsPrimary: 0px 1px 2px 0px #0e121b3d, 0px 0px 0px 1px #335cff;
+$componentsFancyButtonsStroke: 0px 1px 3px 0px #0e121b1f, 0px 0px 0px 1px #ebebeb;
+$componentsToggleSwitch: 0px 6px 10px 0px #0e121b0f, 0px 2px 4px 0px #0e121b08;
+$componentsTooltip: 0px 1px 1px 0.5px #1717170a, 0px 3px 3px -1.5px #17171705, 0px 6px 6px -3px #1717170a, 0px 12px 12px -6px #1717170a, 0px 24px 24px -12px #1717170a, 0px 48px 48px -24px #1717170a, 0px 0px 0px 1px #ebebeb, inset 0px -1px 1px -0.5px #1717170f;
 // custom-shadows
-$customShadowsLarge0Blur: 1;
-$customShadowsLarge0Color: #3333330f;
-$customShadowsLarge0Spread: -0.5;
-$customShadowsLarge0Type: "innerShadow";
-$customShadowsLarge0X: 0;
-$customShadowsLarge0Y: -1;
-$customShadowsLarge1Blur: 0;
-$customShadowsLarge1Color: #3333330a;
-$customShadowsLarge1Spread: 1;
-$customShadowsLarge1Type: "dropShadow";
-$customShadowsLarge1X: 0;
-$customShadowsLarge1Y: 0;
-$customShadowsLarge2Blur: 1;
-$customShadowsLarge2Color: #3333330a;
-$customShadowsLarge2Spread: 0.5;
-$customShadowsLarge2Type: "dropShadow";
-$customShadowsLarge2X: 0;
-$customShadowsLarge2Y: 1;
-$customShadowsLarge3Blur: 3;
-$customShadowsLarge3Color: #33333305;
-$customShadowsLarge3Spread: -1.5;
-$customShadowsLarge3Type: "dropShadow";
-$customShadowsLarge3X: 0;
-$customShadowsLarge3Y: 3;
-$customShadowsLarge4Blur: 6;
-$customShadowsLarge4Color: #3333330a;
-$customShadowsLarge4Spread: -3;
-$customShadowsLarge4Type: "dropShadow";
-$customShadowsLarge4X: 0;
-$customShadowsLarge4Y: 6;
-$customShadowsLarge5Blur: 12;
-$customShadowsLarge5Color: #3333330a;
-$customShadowsLarge5Spread: -6;
-$customShadowsLarge5Type: "dropShadow";
-$customShadowsLarge5X: 0;
-$customShadowsLarge5Y: 12;
-$customShadowsLarge6Blur: 24;
-$customShadowsLarge6Color: #3333330a;
-$customShadowsLarge6Spread: -12;
-$customShadowsLarge6Type: "dropShadow";
-$customShadowsLarge6X: 0;
-$customShadowsLarge6Y: 24;
-$customShadowsLarge7Blur: 48;
-$customShadowsLarge7Color: #3333330a;
-$customShadowsLarge7Spread: -24;
-$customShadowsLarge7Type: "dropShadow";
-$customShadowsLarge7X: 0;
-$customShadowsLarge7Y: 48;
-$customShadowsLarge8Blur: 96;
-$customShadowsLarge8Color: #3333330f;
-$customShadowsLarge8Spread: -32;
-$customShadowsLarge8Type: "dropShadow";
-$customShadowsLarge8X: 0;
-$customShadowsLarge8Y: 96;
-$customShadowsMedium0Blur: 1;
-$customShadowsMedium0Color: #3333330f;
-$customShadowsMedium0Spread: -0.5;
-$customShadowsMedium0Type: "innerShadow";
-$customShadowsMedium0X: 0;
-$customShadowsMedium0Y: -1;
-$customShadowsMedium1Blur: 0;
-$customShadowsMedium1Color: #3333330a;
-$customShadowsMedium1Spread: 1;
-$customShadowsMedium1Type: "dropShadow";
-$customShadowsMedium1X: 0;
-$customShadowsMedium1Y: 0;
-$customShadowsMedium2Blur: 1;
-$customShadowsMedium2Color: #3333330a;
-$customShadowsMedium2Spread: 0.5;
-$customShadowsMedium2Type: "dropShadow";
-$customShadowsMedium2X: 0;
-$customShadowsMedium2Y: 1;
-$customShadowsMedium3Blur: 3;
-$customShadowsMedium3Color: #33333305;
-$customShadowsMedium3Spread: -1.5;
-$customShadowsMedium3Type: "dropShadow";
-$customShadowsMedium3X: 0;
-$customShadowsMedium3Y: 3;
-$customShadowsMedium4Blur: 6;
-$customShadowsMedium4Color: #3333330a;
-$customShadowsMedium4Spread: -3;
-$customShadowsMedium4Type: "dropShadow";
-$customShadowsMedium4X: 0;
-$customShadowsMedium4Y: 6;
-$customShadowsMedium5Blur: 12;
-$customShadowsMedium5Color: #3333330a;
-$customShadowsMedium5Spread: -6;
-$customShadowsMedium5Type: "dropShadow";
-$customShadowsMedium5X: 0;
-$customShadowsMedium5Y: 12;
-$customShadowsMedium6Blur: 24;
-$customShadowsMedium6Color: #3333330a;
-$customShadowsMedium6Spread: -12;
-$customShadowsMedium6Type: "dropShadow";
-$customShadowsMedium6X: 0;
-$customShadowsMedium6Y: 24;
-$customShadowsMedium7Blur: 48;
-$customShadowsMedium7Color: #3333330a;
-$customShadowsMedium7Spread: -24;
-$customShadowsMedium7Type: "dropShadow";
-$customShadowsMedium7X: 0;
-$customShadowsMedium7Y: 48;
-$customShadowsSmall0Blur: 0.5;
-$customShadowsSmall0Color: #33333314;
-$customShadowsSmall0Spread: 0;
-$customShadowsSmall0Type: "innerShadow";
-$customShadowsSmall0X: 0;
-$customShadowsSmall0Y: -0.5;
-$customShadowsSmall1Blur: 0;
-$customShadowsSmall1Color: #3333330a;
-$customShadowsSmall1Spread: 1;
-$customShadowsSmall1Type: "dropShadow";
-$customShadowsSmall1X: 0;
-$customShadowsSmall1Y: 0;
-$customShadowsSmall2Blur: 8;
-$customShadowsSmall2Color: #33333303;
-$customShadowsSmall2Spread: -8;
-$customShadowsSmall2Type: "dropShadow";
-$customShadowsSmall2X: 0;
-$customShadowsSmall2Y: 16;
-$customShadowsSmall3Blur: 6;
-$customShadowsSmall3Color: #33333305;
-$customShadowsSmall3Spread: -6;
-$customShadowsSmall3Type: "dropShadow";
-$customShadowsSmall3X: 0;
-$customShadowsSmall3Y: 12;
-$customShadowsSmall4Blur: 5;
-$customShadowsSmall4Color: #33333314;
-$customShadowsSmall4Spread: -2.5;
-$customShadowsSmall4Type: "dropShadow";
-$customShadowsSmall4X: 0;
-$customShadowsSmall4Y: 5;
-$customShadowsSmall5Blur: 3;
-$customShadowsSmall5Color: #33333329;
-$customShadowsSmall5Spread: -1.5;
-$customShadowsSmall5Type: "dropShadow";
-$customShadowsSmall5X: 0;
-$customShadowsSmall5Y: 1;
-$customShadowsXSmall0Blur: 1;
-$customShadowsXSmall0Color: #3333330f;
-$customShadowsXSmall0Spread: -0.5;
-$customShadowsXSmall0Type: "innerShadow";
-$customShadowsXSmall0X: 0;
-$customShadowsXSmall0Y: -1;
-$customShadowsXSmall1Blur: 0;
-$customShadowsXSmall1Color: #3333330a;
-$customShadowsXSmall1Spread: 1;
-$customShadowsXSmall1Type: "dropShadow";
-$customShadowsXSmall1X: 0;
-$customShadowsXSmall1Y: 0;
-$customShadowsXSmall2Blur: 8;
-$customShadowsXSmall2Color: #3333330f;
-$customShadowsXSmall2Spread: -2;
-$customShadowsXSmall2Type: "dropShadow";
-$customShadowsXSmall2X: 0;
-$customShadowsXSmall2Y: 4;
-$customShadowsXSmall3Blur: 4;
-$customShadowsXSmall3Color: #3333330a;
-$customShadowsXSmall3Spread: 0;
-$customShadowsXSmall3Type: "dropShadow";
-$customShadowsXSmall3X: 0;
-$customShadowsXSmall3Y: 2;
-$customShadowsXSmall4Blur: 2;
-$customShadowsXSmall4Color: #3333330a;
-$customShadowsXSmall4Spread: 0;
-$customShadowsXSmall4Type: "dropShadow";
-$customShadowsXSmall4X: 0;
-$customShadowsXSmall4Y: 1;
+$customShadowsLarge: inset 0px -1px 1px -0.5px #3333330f, 0px 0px 0px 1px #3333330a, 0px 1px 1px 0.5px #3333330a, 0px 3px 3px -1.5px #33333305, 0px 6px 6px -3px #3333330a, 0px 12px 12px -6px #3333330a, 0px 24px 24px -12px #3333330a, 0px 48px 48px -24px #3333330a, 0px 96px 96px -32px #3333330f;
+$customShadowsMedium: inset 0px -1px 1px -0.5px #3333330f, 0px 0px 0px 1px #3333330a, 0px 1px 1px 0.5px #3333330a, 0px 3px 3px -1.5px #33333305, 0px 6px 6px -3px #3333330a, 0px 12px 12px -6px #3333330a, 0px 24px 24px -12px #3333330a, 0px 48px 48px -24px #3333330a;
+$customShadowsSmall: inset 0px -0.5px 0.5px 0px #33333314, 0px 0px 0px 1px #3333330a, 0px 16px 8px -8px #33333303, 0px 12px 6px -6px #33333305, 0px 5px 5px -2.5px #33333314, 0px 1px 3px -1.5px #33333329;
+$customShadowsXSmall: inset 0px -1px 1px -0.5px #3333330f, 0px 0px 0px 1px #3333330a, 0px 4px 8px -2px #3333330f, 0px 2px 4px 0px #3333330a, 0px 1px 2px 0px #3333330a;
 // regular-shadow
-$regularShadowMediumBlur: 32;
-$regularShadowMediumColor: #0e121b1a;
-$regularShadowMediumSpread: -12;
-$regularShadowMediumType: "dropShadow";
-$regularShadowMediumX: 0;
-$regularShadowMediumY: 16;
-$regularShadowXSmallBlur: 2;
-$regularShadowXSmallColor: #0a0d1408;
-$regularShadowXSmallSpread: 0;
-$regularShadowXSmallType: "dropShadow";
-$regularShadowXSmallX: 0;
-$regularShadowXSmallY: 1;
-// Tooltip
-$tooltip0Blur: 1;
-$tooltip0Color: #1717170a;
-$tooltip0Spread: 0.5;
-$tooltip0Type: "dropShadow";
-$tooltip0X: 0;
-$tooltip0Y: 1;
-$tooltip1Blur: 3;
-$tooltip1Color: #17171705;
-$tooltip1Spread: -1.5;
-$tooltip1Type: "dropShadow";
-$tooltip1X: 0;
-$tooltip1Y: 3;
-$tooltip2Blur: 6;
-$tooltip2Color: #1717170a;
-$tooltip2Spread: -3;
-$tooltip2Type: "dropShadow";
-$tooltip2X: 0;
-$tooltip2Y: 6;
-$tooltip3Blur: 12;
-$tooltip3Color: #1717170a;
-$tooltip3Spread: -6;
-$tooltip3Type: "dropShadow";
-$tooltip3X: 0;
-$tooltip3Y: 12;
-$tooltip4Blur: 24;
-$tooltip4Color: #1717170a;
-$tooltip4Spread: -12;
-$tooltip4Type: "dropShadow";
-$tooltip4X: 0;
-$tooltip4Y: 24;
-$tooltip5Blur: 48;
-$tooltip5Color: #1717170a;
-$tooltip5Spread: -24;
-$tooltip5Type: "dropShadow";
-$tooltip5X: 0;
-$tooltip5Y: 48;
-$tooltip6Blur: 0;
-$tooltip6Color: #ebebeb;
-$tooltip6Spread: 1;
-$tooltip6Type: "dropShadow";
-$tooltip6X: 0;
-$tooltip6Y: 0;
-$tooltip7Blur: 1;
-$tooltip7Color: #1717170f;
-$tooltip7Spread: -0.5;
-$tooltip7Type: "innerShadow";
-$tooltip7X: 0;
-$tooltip7Y: -1;
+$regularShadowMedium: 0px 16px 32px -12px #0e121b1a;
+$regularShadowXSmall: 0px 1px 2px 0px #0a0d1408;
 
 // BUILD DESIGN SYSTEM - Breakpoints (SCSS)
-// Generated on 2025-10-26T15:12:05.985Z
+// Generated on 2025-10-26T18:26:19.790Z
 
 // breakpoints
 $breakpoints2xl: 1536px;
@@ -956,7 +442,7 @@ $breakpointsXl: 1440px;
 $breakpointsXs: 320px;
 
 // BUILD DESIGN SYSTEM - Animation (SCSS)
-// Generated on 2025-10-26T15:12:05.985Z
+// Generated on 2025-10-26T18:26:19.790Z
 
 // animation
 $animationDurationFast: 150ms;
@@ -972,7 +458,7 @@ $animationTransitionsBase: "all #{$animationDurationNormal} #{$animationEasingSm
 $animationTransitionsTransform: "transform #{$animationDurationNormal} #{$animationEasingSmooth}";
 
 // BUILD DESIGN SYSTEM - Z-Index (SCSS)
-// Generated on 2025-10-26T15:12:05.985Z
+// Generated on 2025-10-26T18:26:19.791Z
 
 // z-index
 $zIndexBase: 0;
