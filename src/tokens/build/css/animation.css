@@ -1,0 +1,14 @@
+/* BUILD DESIGN SYSTEM - Animation (CSS) */
+:root {
+  --animation-duration-fast: 150ms;
+  --animation-duration-instant: 0ms;
+  --animation-duration-normal: 250ms;
+  --animation-duration-slow: 350ms;
+  --animation-duration-slower: 500ms;
+  --animation-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --animation-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --animation-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --animation-easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-transitions-base: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-transitions-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

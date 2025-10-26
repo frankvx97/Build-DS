@@ -1,0 +1,55 @@
+// BUILD DESIGN SYSTEM - Global Styles
+// Main stylesheet that imports all design tokens and provides base styling
+
+// Import all design tokens (with aliases/references) using @use
+@use '../tokens/build/scss/all' as *;
+
+// Reset & Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $fontFamiliesInter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.5;
+  color: $textStrong950;
+  background-color: $bgWhite0;
+}
+
+// Typography base
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontFamiliesInterDisplay, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+// Utility classes for common patterns
+.container {
+  width: 100%;
+  max-width: $breakpointsXl;
+  margin: 0 auto;
+  padding: 0 $spacing16;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

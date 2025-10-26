@@ -1,0 +1,61 @@
+# Build Design System
+
+Welcome to the **Build Design System** documentation!
+
+This design system is built with:
+- **Design Tokens** from Figma (via Tokens Studio)
+- **Style Dictionary** for token transformation
+- **React** components with TypeScript
+- **SCSS** for styling
+- **Storybook** for documentation
+
+## Getting Started
+
+### Change Theme
+
+You can easily switch between different themes by editing the `config/theme.config.js` file:
+
+```javascript
+export const themeConfig = {
+  colorMode: 'Light',  // Options: 'Light' | 'Dark'
+  neutralMode: 'Gray',  // Options: 'Gray' | 'Slate'
+  themeMode: 'Blue'  // Options: 'Blue' | 'Purple' | 'Orange' | 'Sky'
+};
+```
+
+After changing the configuration, rebuild the tokens:
+
+```bash
+npm run build:tokens
+```
+
+## Project Structure
+
+```
+build-ds/
+├── config/
+│   ├── theme.config.js      # Theme configuration
+│   └── build-tokens.js      # Token build script
+├── src/
+│   ├── from-figma/
+│   │   └── tokens.json      # Raw tokens from Figma
+│   ├── tokens/build/        # Generated tokens
+│   │   ├── scss/            # SCSS with aliases
+│   │   └── css/             # CSS with flat values
+│   ├── styles/
+│   │   └── index.scss       # Global styles
+│   └── components/          # React components
+└── .storybook/              # Storybook configuration
+```
+
+## Design Tokens
+
+Explore our design tokens in the sections below:
+- **Colors** - Foundation colors, semantic tokens, and themes
+- **Typography** - Font families, sizes, weights, and styles
+- **Spacing** - Spacing scale for consistent layouts
+- **Radius** - Border radius values
+- **Elevation** - Shadow definitions
+- **Breakpoints** - Responsive breakpoints
+- **Animation** - Animation durations and easings
+- **Z-Index** - Stacking order values

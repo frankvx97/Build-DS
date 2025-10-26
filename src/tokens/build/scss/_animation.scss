@@ -1,0 +1,15 @@
+// BUILD DESIGN SYSTEM - Animation (SCSS)
+// Generated on 2025-10-26T15:12:05.985Z
+
+// animation
+$animationDurationFast: 150ms;
+$animationDurationInstant: 0ms;
+$animationDurationNormal: 250ms;
+$animationDurationSlow: 350ms;
+$animationDurationSlower: 500ms;
+$animationEasingBounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$animationEasingEnter: cubic-bezier(0, 0, 0.2, 1);
+$animationEasingExit: cubic-bezier(0.4, 0, 1, 1);
+$animationEasingSmooth: cubic-bezier(0.4, 0, 0.2, 1);
+$animationTransitionsBase: "all #{$animationDurationNormal} #{$animationEasingSmooth}";
+$animationTransitionsTransform: "transform #{$animationDurationNormal} #{$animationEasingSmooth}";

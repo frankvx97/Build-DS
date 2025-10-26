@@ -1,0 +1,9 @@
+/* BUILD DESIGN SYSTEM - Theme (CSS) */
+:root {
+  --primary-alpha-10: #476cff1a;
+  --primary-alpha-16: #476cff29;
+  --primary-alpha-24: #476cff3d;
+  --primary-base: #335cff;
+  --primary-dark: #1f3bad;
+  --primary-darker: #2547d0;
+}

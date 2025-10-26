@@ -1,0 +1,9 @@
+/* BUILD DESIGN SYSTEM - Breakpoints (CSS) */
+:root {
+  --breakpoints-2xl: 1536px;
+  --breakpoints-lg: 1024px;
+  --breakpoints-md: 768px;
+  --breakpoints-sm: 640px;
+  --breakpoints-xl: 1440px;
+  --breakpoints-xs: 320px;
+}

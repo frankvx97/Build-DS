@@ -1,0 +1,38 @@
+.type-section {
+  margin-bottom: 48px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+}
+
+.type-sample {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+  }
+
+  &__specs {
+    font-size: 14px;
+    color: #999;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  }
+}
+
+.font-family-sample {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
