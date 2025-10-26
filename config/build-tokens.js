@@ -112,11 +112,53 @@ function flattenTokens(node, currentPath = []) {
 
     const nextPath = [...currentPath, key];
     if (value && typeof value === 'object' && '$value' in value) {
+      const tokenType = value.$type;
+      const tokenValue = value.$value;
+      
+      // Handle composite typography tokens - skip them
+      if (tokenType === 'typography' && typeof tokenValue === 'object' && !Array.isArray(tokenValue)) {
+        continue;
+      }
+      
+      // Handle shadow/boxShadow - convert to CSS box-shadow string
+      if (tokenType === 'boxShadow' || tokenType === 'shadow') {
+        const layers = Array.isArray(tokenValue) ? tokenValue : [tokenValue];
+        
+        // Convert shadow layers to CSS box-shadow format
+        const shadowString = layers
+          .map(layer => {
+            if (!layer || typeof layer !== 'object') return null;
+            
+            const x = layer.x ?? 0;
+            const y = layer.y ?? 0;
+            const blur = layer.blur ?? 0;
+            const spread = layer.spread ?? 0;
+            const color = layer.color ?? '#000000';
+            const type = layer.type ?? 'dropShadow';
+            
+            // Build CSS box-shadow string
+            const shadowValue = `${x}px ${y}px ${blur}px ${spread}px ${color}`;
+            return type === 'innerShadow' ? `inset ${shadowValue}` : shadowValue;
+          })
+          .filter(Boolean)
+          .join(', ');
+        
+        entries.push({
+          path: nextPath,
+          root: nextPath[0],
+          value: shadowString,
+          type: 'boxShadow',
+          description: value.$description ?? null,
+        });
+        continue;
+      }
+      
+      // Handle regular tokens
       entries.push({
         path: nextPath,
         root: nextPath[0],
-        value: value.$value,
-        type: value.$type ?? null,
+        value: tokenValue,
+        type: tokenType ?? null,
         description: value.$description ?? null,
       });
     } else if (value && typeof value === 'object') {
@@ -168,6 +210,7 @@ function shouldQuoteScss(value, type) {
   if (/^[a-zA-Z-]+\(/.test(value)) return false;
   if (/^var\(/.test(value) || /^calc\(/.test(value)) return false;
   if (type === 'color') return false;
+  if (type === 'boxShadow') return false; // Don't quote box-shadow values
   return value.includes(' ') || /[A-Z]/.test(value) || /[^a-z0-9_-]/i.test(value);
 }
 
