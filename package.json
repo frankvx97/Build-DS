@@ -27,8 +27,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "react": "^19.0.2",
-    "react-dom": "^19.0.2"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.5.0",

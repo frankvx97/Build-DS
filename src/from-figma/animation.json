@@ -1,0 +1,80 @@
+{
+  "animation": {
+    "duration": {
+      "instant": {
+        "$value": "0ms",
+        "$type": "animation"
+      },
+      "fast": {
+        "$value": "150ms",
+        "$type": "animation"
+      },
+      "normal": {
+        "$value": "250ms",
+        "$type": "animation"
+      },
+      "slow": {
+        "$value": "350ms",
+        "$type": "animation"
+      },
+      "slower": {
+        "$value": "500ms",
+        "$type": "animation"
+      }
+    },
+    "easing": {
+      "smooth": {
+        "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "animation"
+      },
+      "enter": {
+        "$value": "cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "animation"
+      },
+      "exit": {
+        "$value": "cubic-bezier(0.4, 0, 1, 1)",
+        "$type": "animation"
+      },
+      "bounce": {
+        "$value": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+        "$type": "animation"
+      }
+    },
+    "delay": {
+      "none": {
+        "$value": "0ms",
+        "$type": "animation"
+      },
+      "xs": {
+        "$value": "30ms",
+        "$type": "animation"
+      },
+      "sm": {
+        "$value": "60ms",
+        "$type": "animation"
+      },
+      "md": {
+        "$value": "90ms",
+        "$type": "animation"
+      },
+      "lg": {
+        "$value": "120ms",
+        "$type": "animation"
+      },
+      "xl": {
+        "$value": "150ms",
+        "$type": "animation"
+      }
+    },
+    "transitions": {
+      "base": {
+        "$value": "all {animation.duration.normal} {animation.easing.smooth}",
+        "$type": "animation"
+      },
+      "transform": {
+        "$value": "transform {animation.duration.normal} {animation.easing.smooth}",
+        "$type": "animation"
+      }
+    }
+  }
+}
